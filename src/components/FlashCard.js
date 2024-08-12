@@ -71,7 +71,7 @@ function FlashcardCarousel() {
         <div className="main">
             <h1 className="titl">Flashcards</h1>
             <div className="Admin">
-                <img className="RightHand" src={right}></img>
+                <img className="RightHand" src={right} alt="a"></img>
                 <button>
                     <Link to="/edit">Admin Page</Link>
                 </button>

@@ -99,7 +99,7 @@ export default function EditFlashcard() {
     <div className="EditFlashCard">
       <h1 className="title">Edit Page</h1>
       <div className="Main">
-      <img className="RightHan" src={right}></img>
+      <img className="RightHan" src={right} alt="a"></img>
         <ActionButton>
           <Link to="/">User Page</Link>
         </ActionButton>
