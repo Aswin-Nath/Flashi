@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import FlashcardList from "./components/FlashCard";
+import EditFlashcard from "./components/EditFlashcard"; // Assuming you have this component for editing
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          {/* Route for displaying flashcards */}
+          <Route path="/" element={<FlashcardList />} />
+          
+          {/* Route for editing flashcards */}
+          <Route path="/edit" element={<EditFlashcard />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
